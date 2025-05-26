@@ -260,6 +260,49 @@ main.disenioavance a:hover {
   color: var(--color-resaltado);
 }
 
+.container-paleta{
+      display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-colores{
+  display: flex;
+  padding: 15px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.container-colores div{
+  height: 75px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.red{
+  background-color: #EF233C;
+}
+
+.yellow{
+  background-color: #FFD100;
+}
+
+.blue{
+  background-color: #2B2D42;
+  color: #fff;
+}
+
+.pink{
+  background-color: #F62A66;
+}
+
+.green{
+  background-color: #58AB54;
+}
+
 @media (max-width: 768px) {
   main.disenioavance {
       padding: 1rem;
