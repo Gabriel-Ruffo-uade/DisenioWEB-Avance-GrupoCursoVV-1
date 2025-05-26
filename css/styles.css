@@ -12,7 +12,7 @@
   --color-fondo: #f9f9f9;
   --color-texto: #333333;
   --color-gris: #cccccc;
-  --color-resaltado:#ffcc99;
+  --color-resaltado: #ffcc99;
 }
 
 /* configuracion basica de las paginas */
@@ -43,6 +43,15 @@ header {
 .logo {
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.logoParque {
+  max-width: 200px;
+}
+
+.imagenMapaSitio {
+  max-width: 400px;
+  border-radius: 15px;
 }
 
 /* Navegación del header*/
@@ -96,8 +105,8 @@ nav ul li a.active {
 
 nav ul li a.active::after {
   color: var(--color-resaltado);
-  width: 0; 
-  left: 50%; 
+  width: 0;
+  left: 50%;
   transition: none;
 }
 
@@ -260,20 +269,20 @@ main.disenioavance a:hover {
   color: var(--color-resaltado);
 }
 
-.container-paleta{
-      display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.container-paleta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.container-colores{
+.container-colores {
   display: flex;
   padding: 15px;
   width: 100%;
   justify-content: space-evenly;
 }
 
-.container-colores div{
+.container-colores div {
   height: 75px;
   width: 75px;
   display: flex;
@@ -282,38 +291,38 @@ main.disenioavance a:hover {
   border-radius: 10px;
 }
 
-.red{
+.red {
   background-color: #EF233C;
 }
 
-.yellow{
+.yellow {
   background-color: #FFD100;
 }
 
-.blue{
+.blue {
   background-color: #2B2D42;
   color: #fff;
 }
 
-.pink{
+.pink {
   background-color: #F62A66;
 }
 
-.green{
+.green {
   background-color: #58AB54;
 }
 
 @media (max-width: 768px) {
   main.disenioavance {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   main.disenioavance h1 {
-      font-size: 1.6rem;
+    font-size: 1.6rem;
   }
 
   main.disenioavance h2 {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 }
 
