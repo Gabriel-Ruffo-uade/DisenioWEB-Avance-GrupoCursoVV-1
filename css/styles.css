@@ -198,6 +198,74 @@ ul {
   margin-top: 1em;
 }
 
+/*Diseño para la pagina home*/
+.grupo {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.grupo h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primario);
+  border-bottom: 2px solid var(--color-primario);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card-integrante {
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-gris);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-integrante:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-integrante i.fa-user {
+  font-size: 2rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.card-integrante p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--color-texto);
+}
+
+.card-integrante a {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--color-primario);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.card-integrante a i {
+  margin-right: 5px;
+}
+
+.card-integrante a:hover {
+  color: var(--color-resaltado);
+}
+
 /*disenio para la pagina avances*/
 main.disenioavance {
   background-color: var(--color-fondo);
@@ -385,5 +453,9 @@ footer {
 
   .nav .icon {
     display: none;
+  }
+
+  .card-integrante {
+    width: 100%;
   }
 }
