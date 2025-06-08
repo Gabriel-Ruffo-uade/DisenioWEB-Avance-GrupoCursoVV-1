@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <div class="logo">UADE - Trabajo Practico Grupal</div>
+        <div class="logo"><img src="./imagenes/logo.png" alt="imagen del logo" class="logoHeader" /></div>
 
         <!-- Checkbox oculto para toggle -->
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
@@ -32,6 +32,8 @@
                 </li>
             </ul>
         </nav>
+        <input type="checkbox" id="toggle-dark" hidden></input>
+        <label for="toggle-dark" id = "label-DarkMode" class="dark-mode" title="Modo oscuro">🌙</label>
     </header>
 
     <main class="home">
@@ -77,11 +79,42 @@
         </section>
     </main>
 
-    <footer>
-        <p> © 2025</p>
-        <p>Grupo 1 - Curso: Diseño y Desarollo Web (15130)</p>
-        <p>Profesora: Patricia Litovicius</p>
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="./imagenes/logoUADE.png" alt="Logo UADE" />
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-group">
+                <h4>Integrantes</h4>
+                <ul>
+                    <li>Citoler Martin Alejo</li>
+                    <li>Herreros Lucia</li>
+                    <li>Reverter Santiago</li>
+                    <li>Ruffo Eduardo Gabriel</li>
+                    <li>Castelo Juan Manuel</li>
+                </ul>
+            </div>
+
+            <div class="footer-group">
+                <h4>Información</h4>
+                <p>Trabajo grupal</p>
+                <p>Grupo 1</p>
+                <p>Diseño y Desarrollo Web (15130)</p>
+                <p>Profesora: Patricia Litovicius</p>
+            </div>
+
+            <div class="footer-group">
+                <h4>Proyecto</h4>
+                <p>
+                    <a href="https://gabriel-ruffo-uade.github.io/DisenioWEB-FestiPark-GrupoCursoVV-1/" target="_blank">
+                        <i class="fas fa-link"></i> Portfolio del proyecto
+                    </a>
+                </p>
+            </div>
+        </div>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

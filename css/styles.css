@@ -13,6 +13,11 @@
   --color-texto: #333333;
   --color-gris: #cccccc;
   --color-resaltado: #ffcc99;
+  --dark-header: #121212;
+  --dark-texto: #f9f9f9;
+  --dark-fondo-contenedor: #2b2b2b;
+  --dark-fondo: #1c1c1c;
+  --dark-tarjetas: #444;
 }
 
 /* configuracion basica de las paginas */
@@ -40,9 +45,14 @@ header {
   z-index: 1000;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2em;
+.logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoHeader{
+  max-width: 80px;
 }
 
 .logoParque {
@@ -380,6 +390,80 @@ main.disenioavance a:hover {
   background-color: #58AB54;
 }
 
+/* ---Boton modo oscuro--- */
+.dark-mode-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Estilos de modo oscuro */
+body.dark-mode {
+  background-color: var(--dark-fondo);
+  color: var(--dark-texto);
+}
+
+body.dark-mode header {
+  background-color: var(--dark-header);
+  color: var(--dark-texto);
+}
+
+body.dark-mode nav ul{
+  background-color: var(--dark-header);
+}
+
+
+body.dark-mode nav ul li a {
+  color: var(--dark-texto);
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li a.active {
+  color: var(--color-resaltado);
+}
+
+body.dark-mode main,
+body.dark-mode .card-integrante,
+body.dark-mode .card-integrante p,
+body.dark-mode .card-integrante i,
+body.dark-mode .card-integrante a,
+body.dark-mode .footer,
+body.dark-mode .footer-group a, 
+body.dark-mode .footer-group h4 {
+  background-color: var(--dark-fondo-contenedor);
+  color: var(--dark-texto);
+  border-color: var(--dark-tarjetas);
+}
+
+body.dark-mode .card-integrante a:hover,
+body.dark-mode a:hover {
+  color: var(--color-resaltado);
+}
+
+body.dark-mode .disenioavance h1,
+body.dark-mode .grupo h1{
+  border-bottom: 2px solid var(--dark-texto);
+  color: var(--dark-texto);
+}
+
+body.dark-mode .disenioavance section {
+  background-color: var(--dark-fondo);
+}
+
+body.dark-mode .disenioavance,
+body.dark-mode .disenioavance section h2,
+body.dark-mode .disenioavance section ul li::before,
+body.dark-mode .disenioavance section ul li strong,
+body.dark-mode .disenioavance section p strong,
+body.dark-mode .disenioavance section a {
+  color: var(--dark-texto);
+}
+
 @media (max-width: 768px) {
   main.disenioavance {
     padding: 1rem;
@@ -403,6 +487,8 @@ main.disenioavance a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
 /* footer */
 footer {
   background-color: var(--color-gris);
@@ -410,6 +496,66 @@ footer {
   padding: 1em;
   color: var(--color-texto);
 }
+
+.footer {
+  background-color: var(--color-gris);
+  color: var(--color-texto);
+  padding: 2rem 1rem;
+  border-top: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  max-width: 140px;
+  height: auto;
+}
+
+/* Footer content en columnas centradas (en móviles) */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-group {
+  max-width: 300px;
+  text-align: center;
+}
+
+.footer-group h4 {
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.footer-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-group li {
+  margin: 0.25rem 0;
+}
+
+.footer-group a {
+  color: var(--color-texto);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-group a:hover {
+  text-decoration: underline;
+}
+
+/* Diseño horizontal para pantallas más grandes */
+
 
 /*-----Responsive Tablets*/
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -436,7 +582,7 @@ footer {
     flex-direction: column;
     display: none;
     position: absolute;
-    top: 60px;
+    top: 110px;
     right: 0;
     background-color: var(--color-primario);
     width: 100%;
@@ -457,5 +603,28 @@ footer {
 
   .card-integrante {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .footer-group {
+    text-align: left;
   }
 }
