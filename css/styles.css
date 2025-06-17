@@ -208,6 +208,15 @@ ul {
   margin-top: 1em;
 }
 
+.sitio-web {
+  text-decoration: none;
+  color: var(--color-primario);
+}
+
+.sitio-web:hover {
+  color: var(--color-resaltado);
+}
+
 /*Diseño para la pagina home*/
 .grupo {
   text-align: center;
@@ -478,13 +487,47 @@ body.dark-mode .disenioavance section a {
   }
 }
 
-/* Imagen en construcción para la página proyecto */
-.img-construccion {
-  max-width: 100%;
-  height: auto;
-  margin-top: 2em;
+/* Página proyecto */
+
+.card-video {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.video-card {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  border: 1px solid var(--color-gris);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5em;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.video-card h3 {
+  color: var(--color-primario);
+  margin-bottom: 1em;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 
